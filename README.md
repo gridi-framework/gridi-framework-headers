@@ -1,7 +1,7 @@
 # Gridi Framework Headers
 
 ## Install
-`brew install gridi-framework-headers`
+`bower install gridi-framework-headers`
 
 ## Licence
 
