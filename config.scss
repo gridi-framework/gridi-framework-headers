@@ -1,16 +1,79 @@
-$h1-h6-margin: $elements-margin !default;
+//Margins
+$h1-h6-margin-top: $elements-margin-top !default;
+$h1-h6-margin-bottom: $elements-margin-bottom !default;
+$h1-h6-margin-left: $elements-margin-left !default;
+$h1-h6-margin-right: $elements-margin-right !default;
+//Defined margins for each screens.
+$h1-h6-margin-for-screens: () !default;
+/*$h1-h6-margin-for-screens: (
+    s1: (
+        top: 20px, //Not required. Define only the margins values you want to change. Example - s2: ( top: 20px ) - change only top margin for screens greater than s2
+        bottom: 20px,
+        left: 20px,
+        right: 20px,
+    ),
+    ...
+) !default;*/
+
+//Font
 $h1-h6-font-weight: normal !default;
-$h1-h6-line-height: 1.1em !default;
+$h1-h6-line-height: 1.2em !default;
+$h1-h6-line-height-for-screens: ()!default;
+/*$h1-h6-line-height-for-screens: (
+    s1: 1.8em,
+    ...
+) !default;*/
 $h1-h6-color: $primary-color !default;
     //H1
     $h1-font-size: 1.8em !default;
+    //Defined font size for each screens.
+    $h1-font-size-for-screens: ()!default;
+    /*$h1-font-size-for-screens: (
+        s1: 1.8em,
+        ...
+    ) !default;*/
+
     //H2
     $h2-font-size: 1.5em !default;
+    //Defined font size for each screens.
+    $h2-font-size-for-screens: ()!default;
+    /*$h2-font-size-for-screens: (
+        s1: 1.5em,
+        ...
+    ) !default;*/
+
     //H3
     $h3-font-size: 1.46em !default;
+    //Defined font size for each screens.
+    $h3-font-size-for-screens: ()!default;
+    /*$h3-font-size-for-screens: (
+        s1: 1.46em,
+        ...
+    ) !default;*/
     //H4
+
     $h4-font-size: 1.38em !default;
+    //Defined font size for each screens.
+    $h4-font-size-for-screens: ()!default;
+    /*$h4-font-size-for-screens: (
+        s1: 1.38em,
+        ...
+    ) !default;*/
+
     //H5
     $h5-font-size: 1.3em !default;
+    //Defined font size for each screens.
+    $h5-font-size-for-screens: ()!default;
+    /*$h5-font-size-for-screens: (
+        s1: 1.3em,
+        ...
+    ) !default;*/
+
     //H6
     $h6-font-size: 1.2em !default;
+    //Defined font size for each screens.
+    $h6-font-size-for-screens: ();
+    /*$h6-font-size-for-screens: (
+        s1: 1.2em,
+        ...
+    ) !default;*/
