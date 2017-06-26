@@ -4,20 +4,22 @@
     }
 }
 
-@mixin include-h1-h6-color($color) {
-    color: $color;
-}
-
-@mixin h1-h6-color($color) {
-    @include h1-h6-style() {
-        @include include-h1-h6-color($color);
+@mixin include-h1-h6-colors($colors-map) {
+    @if map-has-key($colors-map, color) {
+        color: map-get($colors-map, color);
     }
 }
 
-@mixin class-h1-h6-color($class, $color) {
+@mixin h1-h6-colors($colors-map) {
+    @include h1-h6-style() {
+        @include include-h1-h6-colors($colors-map);
+    }
+}
+
+@mixin class-h1-h6-colors($class, $colors-map) {
     @include h1-h6-style() {
         &.#{$class} {
-            @include include-h1-h6-color($color);
+            @include include-h1-h6-colors($colors-map);
         }
     }
 }
