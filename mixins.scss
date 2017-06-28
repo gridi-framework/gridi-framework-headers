@@ -5,7 +5,7 @@
 }
 
 @mixin include-h1-h6-colors($colors-map) {
-    @if map-has-key($colors-map, color) {
+    @if map-has-key($colors-map, color) and map-get($colors-map, color) {
         color: map-get($colors-map, color);
     }
 }
