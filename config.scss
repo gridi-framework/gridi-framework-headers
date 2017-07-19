@@ -16,6 +16,7 @@ $h1-h6-margin-for-screens: () !default;
 ) !default;*/
 
 //Font
+$h1-h6-font-family: null !default;
 $h1-h6-font-weight: normal !default;
 $h1-h6-line-height: 1.4em !default;
 $h1-h6-line-height-for-screens: ()!default;
@@ -23,7 +24,7 @@ $h1-h6-line-height-for-screens: ()!default;
     s1: 1.8em,
     ...
 ) !default;*/
-$h1-h6-color: $primary-color !default;
+$h1-h6-color: null !default;
     //H1
     $h1-font-size: 1.8em !default;
     //Defined font size for each screens.
