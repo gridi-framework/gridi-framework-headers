@@ -4,7 +4,7 @@ $h1-h6-margin-bottom: $elements-margin-bottom !default;
 $h1-h6-margin-left: $elements-margin-left !default;
 $h1-h6-margin-right: $elements-margin-right !default;
 //Defined margins for each screens.
-$h1-h6-margin-for-screens: () !default;
+$h1-h6-margin-for-screens: $elements-margin-for-screens !default;
 /*$h1-h6-margin-for-screens: (
     s1: (
         top: 20px, //Not required. Define only the margins values you want to change. Example - s2: ( top: 20px ) - change only top margin for screens greater than s2
