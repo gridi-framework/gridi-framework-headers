@@ -12,8 +12,11 @@
     }
 }
 
+@mixin h1-h6-extra-colors-propertys($colors-map) {}
+
 @mixin h1-h6-colors-propertys($colors-map) {
     @include property-from-map($colors-map, color);
+    @include h1-h6-extra-colors-propertys($colors-map);
 }
 
 @mixin h1-h6-colors($colors-map) {
