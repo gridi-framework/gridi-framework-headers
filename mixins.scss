@@ -1,25 +1,31 @@
-@mixin h1-h6-style() {
+@mixin h1-h6() {
     h1, h2, h3, h4, h5, h6 {
         @content;
     }
 }
 
-@mixin include-h1-h6-colors($colors-map) {
-    @if map-has-key($colors-map, color) and map-get($colors-map, color) {
-        color: map-get($colors-map, color);
+@mixin h1-h6-class($class) {
+    h1, h2, h3, h4, h5, h6 {
+        &.#{$class} {
+            @content;
+        }
     }
+}
+
+@mixin h1-h6-colors-propertys($colors-map) {
+    @include property-from-map($colors-map, color);
 }
 
 @mixin h1-h6-colors($colors-map) {
-    @include h1-h6-style() {
-        @include include-h1-h6-colors($colors-map);
+    @include h1-h6() {
+        @include h1-h6-colors-propertys($colors-map);
     }
 }
 
-@mixin class-h1-h6-colors($class, $colors-map) {
-    @include h1-h6-style() {
+@mixin h1-h6-class-colors($class, $colors-map) {
+    @include h1-h6() {
         &.#{$class} {
-            @include include-h1-h6-colors($colors-map);
+            @include h1-h6-colors-propertys($colors-map);
         }
     }
 }

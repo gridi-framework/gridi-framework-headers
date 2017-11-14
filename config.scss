@@ -15,6 +15,23 @@ $h1-h6-margin-for-screens: () !default;
     ...
 ) !default;*/
 
+//Paddings
+$h1-h6-padding-top: 0 !default;
+$h1-h6-padding-bottom: 0 !default;
+$h1-h6-padding-left: 0 !default;
+$h1-h6-padding-right: 0 !default;
+//Defined paddings for each screens.
+$h1-h6-padding-for-screens: () !default;
+/*$h1-h6-padding-for-screens: (
+    s1: (
+        top: 20px, //Not required. Define only the paddings values you want to change. Example - s2: ( top: 20px ) - change only top padding for screens greater than s2
+        bottom: 20px,
+        left: 20px,
+        right: 20px,
+    ),
+    ...
+) !default;*/
+
 //Font
 $h1-h6-font-family: null !default;
 $h1-h6-font-weight: normal !default;
@@ -24,7 +41,11 @@ $h1-h6-line-height-for-screens: ()!default;
     s1: 1.8em,
     ...
 ) !default;*/
+
 $h1-h6-color: null !default;
+
+@mixin h1-h6-extra-style() {}
+
     //H1
     $h1-font-size: 1.8em !default;
     //Defined font size for each screens.
@@ -33,6 +54,7 @@ $h1-h6-color: null !default;
         s1: 1.8em,
         ...
     ) !default;*/
+    @mixin h1-extra-style() {}
 
     //H2
     $h2-font-size: 1.5em !default;
@@ -42,6 +64,7 @@ $h1-h6-color: null !default;
         s1: 1.5em,
         ...
     ) !default;*/
+    @mixin h2-extra-style() {}
 
     //H3
     $h3-font-size: 1.46em !default;
@@ -52,6 +75,7 @@ $h1-h6-color: null !default;
         ...
     ) !default;*/
     //H4
+    @mixin h3-extra-style() {}
 
     $h4-font-size: 1.38em !default;
     //Defined font size for each screens.
@@ -60,6 +84,7 @@ $h1-h6-color: null !default;
         s1: 1.38em,
         ...
     ) !default;*/
+    @mixin h4-extra-style() {}
 
     //H5
     $h5-font-size: 1.3em !default;
@@ -69,6 +94,7 @@ $h1-h6-color: null !default;
         s1: 1.3em,
         ...
     ) !default;*/
+    @mixin h5-extra-style() {}
 
     //H6
     $h6-font-size: 1.2em !default;
@@ -78,3 +104,4 @@ $h1-h6-color: null !default;
         s1: 1.2em,
         ...
     ) !default;*/
+    @mixin h6-extra-style() {}

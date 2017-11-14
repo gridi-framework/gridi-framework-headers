@@ -1,36 +1,49 @@
-@include h1-h6-style() {
-    @include include-element-margin($h1-h6-margin-top, $h1-h6-margin-bottom, $h1-h6-margin-left, $h1-h6-margin-right, $h1-h6-margin-for-screens);
-    padding: 0;
-    @if $h1-h6-font-family {
-        font-family: $h1-h6-font-family;
-    }
+@include h1-h6() {
+    @include margin-shorthand-with-screens-support((
+        top: $h1-h6-margin-top, 
+        bottom: $h1-h6-margin-bottom, 
+        left: $h1-h6-margin-left, 
+        right: $h1-h6-margin-right
+    ), $h1-h6-margin-for-screens);
+    @include padding-shorthand-with-screens-support((
+        top: $h1-h6-padding-top, 
+        bottom: $h1-h6-padding-bottom, 
+        left: $h1-h6-padding-left, 
+        right: $h1-h6-padding-right
+    ), $h1-h6-padding-for-screens);
+    @include not-required-property(font-family, $h1-h6-font-family);
     font-weight: $h1-h6-font-weight;
-    @include include-single-property-with-screens-support(line-height, $h1-h6-line-height, $h1-h6-line-height-for-screens);
-    @if $h1-h6-color {
-        color: $h1-h6-color;
-    }
+    @include single-property-with-screens-support(line-height, $h1-h6-line-height, $h1-h6-line-height-for-screens);
+    @include not-required-property(color, $h1-h6-color);
+    @include h1-h6-extra-style();
 }
 
 h1 {
-    @include include-single-property-with-screens-support(font-size, $h1-font-size, $h1-font-size-for-screens);
+    @include single-property-with-screens-support(font-size, $h1-font-size, $h1-font-size-for-screens);
+    @include h1-extra-style();
 }
 
 h2 {
-    @include include-single-property-with-screens-support(font-size, $h2-font-size, $h2-font-size-for-screens);
+    @include single-property-with-screens-support(font-size, $h2-font-size, $h2-font-size-for-screens);
+    @include h2-extra-style();
 }
 
 h3 {
-    @include include-single-property-with-screens-support(font-size, $h3-font-size, $h3-font-size-for-screens);
+    @include single-property-with-screens-support(font-size, $h3-font-size, $h3-font-size-for-screens);
+    @include h3-extra-style();
 }
 
 h4 {
-    @include include-single-property-with-screens-support(font-size, $h4-font-size, $h4-font-size-for-screens);
+    @include single-property-with-screens-support(font-size, $h4-font-size, $h4-font-size-for-screens);
+    @include h4-extra-style();
 }
 
 h5 {
-    @include include-single-property-with-screens-support(font-size, $h5-font-size, $h5-font-size-for-screens);
+    @include single-property-with-screens-support(font-size, $h5-font-size, $h5-font-size-for-screens);
+    @include h5-extra-style();
 }
 
 h6 {
-    @include include-single-property-with-screens-support(font-size, $h6-font-size, $h6-font-size-for-screens);
+    @include single-property-with-screens-support(font-size, $h6-font-size, $h6-font-size-for-screens);
+    @include h6-extra-style();
 }
