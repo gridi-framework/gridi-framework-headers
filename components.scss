@@ -5,45 +5,45 @@
         left: $h1-h6-margin-left, 
         right: $h1-h6-margin-right
     ), $h1-h6-margin-for-screens);
-    @include padding-shorthand-with-screens-support((
+    @include padding-shorthand((
         top: $h1-h6-padding-top, 
         bottom: $h1-h6-padding-bottom, 
         left: $h1-h6-padding-left, 
         right: $h1-h6-padding-right
-    ), $h1-h6-padding-for-screens);
+    ));
     @include not-required-property(font-family, $h1-h6-font-family);
     font-weight: $h1-h6-font-weight;
-    @include single-property-with-screens-support(line-height, $h1-h6-line-height, $h1-h6-line-height-for-screens);
+    line-height: $h1-h6-line-height;
     @include not-required-property(color, $h1-h6-color);
     @include h1-h6-extra-style();
 }
 
 h1 {
-    @include single-property-with-screens-support(font-size, $h1-font-size, $h1-font-size-for-screens);
+    font-size: $h1-font-size;
     @include h1-extra-style();
 }
 
 h2 {
-    @include single-property-with-screens-support(font-size, $h2-font-size, $h2-font-size-for-screens);
+    font-size: $h2-font-size;
     @include h2-extra-style();
 }
 
 h3 {
-    @include single-property-with-screens-support(font-size, $h3-font-size, $h3-font-size-for-screens);
+    font-size: $h3-font-size;
     @include h3-extra-style();
 }
 
 h4 {
-    @include single-property-with-screens-support(font-size, $h4-font-size, $h4-font-size-for-screens);
+    font-size: $h4-font-size;
     @include h4-extra-style();
 }
 
 h5 {
-    @include single-property-with-screens-support(font-size, $h5-font-size, $h5-font-size-for-screens);
+    font-size: $h5-font-size;
     @include h5-extra-style();
 }
 
 h6 {
-    @include single-property-with-screens-support(font-size, $h6-font-size, $h6-font-size-for-screens);
+    font-size: $h6-font-size;
     @include h6-extra-style();
 }
