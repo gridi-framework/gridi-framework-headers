@@ -12,11 +12,13 @@
     }
 }
 
-@mixin h1-h6-extra-colors-propertys($colors-map) {}
+//@mixin h1-h6-extra-colors-propertys($colors-map) {} //Create this mixin before import module when you want add some special colors style for element
 
 @mixin h1-h6-colors-propertys($colors-map) {
     @include property-from-map($colors-map, color);
-    @include h1-h6-extra-colors-propertys($colors-map);
+    @if mixin-exists(h1-h6-extra-colors-propertys) {
+        @include h1-h6-extra-colors-propertys($colors-map);
+    }
 }
 
 @mixin h1-h6-colors($colors-map) {

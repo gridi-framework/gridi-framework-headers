@@ -15,35 +15,49 @@
     font-weight: $h1-h6-font-weight;
     line-height: $h1-h6-line-height;
     @include not-required-property(color, $h1-h6-color);
-    @include h1-h6-extra-style();
+    @if mixin-exists(h1-h6-extra-style) {
+        @include h1-h6-extra-style();
+    }
 }
 
 h1 {
     font-size: $h1-font-size;
-    @include h1-extra-style();
+    @if mixin-exists(h1-extra-style) {
+        @include h1-extra-style();
+    }
 }
 
 h2 {
     font-size: $h2-font-size;
-    @include h2-extra-style();
+    @if mixin-exists(h2-extra-style) {
+        @include h2-extra-style();
+    }
 }
 
 h3 {
     font-size: $h3-font-size;
-    @include h3-extra-style();
+    @if mixin-exists(h3-extra-style) {
+        @include h3-extra-style();
+    }
 }
 
 h4 {
     font-size: $h4-font-size;
-    @include h4-extra-style();
+    @if mixin-exists(h4-extra-style) {
+        @include h4-extra-style();
+    }
 }
 
 h5 {
     font-size: $h5-font-size;
-    @include h5-extra-style();
+    @if mixin-exists(h5-extra-style) {
+        @include h5-extra-style();
+    }
 }
 
 h6 {
     font-size: $h6-font-size;
-    @include h6-extra-style();
+    @if mixin-exists(h6-extra-style) {
+        @include h6-extra-style();
+    }
 }
